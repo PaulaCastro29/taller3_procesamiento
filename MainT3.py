@@ -1,6 +1,6 @@
 #------------------------------------------------------------------------------------------------------------------------
 # TALLE 3: Paula Andrea Castro y Michael Hernando Contreras
-# MainT3.py se llaman los métodos de Metodos.py y adicional se realiza la interpolación resultante del Punto 4 del taller
+# main.py se llaman los métodos de Metodos.py y adicional se realiza la interpolación resultante del Punto 4 del taller
 #------------------------------------------------------------------------------------------------------------------------
 
 # Importación de librerias y métodos de la clase Descomp
@@ -30,10 +30,10 @@ if __name__ == '__main__':
     #Desc.Diezmado() # (Quitar comentario para visualizar)
  # Visualización del punto 2 del taller 3
     #Desc.Interpolacion() #(Quitar comentario para visualizar)
-# Visualización del punto 3 y 4
+# Visualización del punto 3 y 4, retorno de parametros
     Iim,N = Desc.Descomposicion()
     I = N*2
-    #Intepolación final
+    #Interpolación final
     rows, cols = Iim.shape
     num_of_zeros = I
     image_zeros = np.zeros((num_of_zeros * rows, num_of_zeros * cols), dtype=Iim.dtype)
@@ -44,6 +44,8 @@ if __name__ == '__main__':
     image_interpolated *= num_of_zeros ** 2
     # Visualización imagen interpolada
     cv2.imshow("Imagen Original", image)
-    cv2.imshow("ILL Interpolada", image_interpolated)
+    cv2.imshow("Imagen Interpolada", image_interpolated)
     cv2.waitKey(0)
+
+
 
